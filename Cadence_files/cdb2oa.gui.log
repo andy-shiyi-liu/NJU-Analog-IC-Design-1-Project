@@ -1,0 +1,240 @@
+********************************************************************************
+Program:	@(#)$CDS: cdb2oa version 6.1.8-64b 10/01/2018 19:50 (ip-172-18-22-52) $
+		sub-version  IC6.1.8-64b.83 
+Started at:	Nov 20 07:15:13 2021
+Hierarchy:	/opt/eda/cadence/IC618
+User Name:	daruitaka
+Host Name:	eda
+Options:	-cdslibpath 
+          /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/cds.lib 
+          -lib smic18mmrf -log cdb2oa.gui.log -appendlog 
+          -mapundefinedpingroups strong 
+Directory:	/home/daruitaka/EDA/smic018
+Log File:	/home/daruitaka/EDA/smic018/cdb2oa.gui.log
+
+	Copyright (C) 2001-2005 Cadence Design Systems, Inc. All rights reserved  worldwide
+********************************************************************************
+
+
+Unable to open library ripper at path /opt/eda/cadence/IC618/tools.lnx86/dfII/etc/dci/ripper: Invalid Lib Path.
+
+Unable to open library DRM at path /home/daruitaka/EDA/smic018/DRM: Invalid Lib Path.
+
+ERROR   (CDBOA-411): The translator stopped because the OpenAccess cds.lib       
+                     definition for library "smic18mmrf" points back to the CDBA
+                     version of the library. You cannot mix OpenAccess and CDBA 
+                     data in the same location. Remove the definition from the  
+                     OpenAccess cds.lib file or redefine it so that it points to
+                     a different location.
+
+
+********************************************************************************
+Translation of library "smic18mmrf" stopped.
+
+
+Message Summary:
+
+ERROR   (CDBOA-411): The translator stopped because the OpenAccess cds.lib       
+                     definition for library <name> points back to the CDBA      
+                     version of the library. You cannot mix OpenAccess and CDBA 
+                     data in the same location. Remove the definition from the  
+                     OpenAccess cds.lib file or redefine it so that it points to
+                     a different location.
+                     
+                      Generated once. The definition for the specified library  
+                     in the OpenAccess cds.lib file would place the OpenAccess  
+                     version of the library in the same location as the CDBA    
+                     version. This is not permitted. Either remove the          
+                     definition from the OpenAccess cds.lib file and let the    
+                     translator create it for you or redefine it so that it     
+                     points to a location other than the location of the CDBA   
+                     library.
+
+********************************************************************************
+
+
+********************************************************************************
+Program:	@(#)$CDS: cdb2oa version 6.1.8-64b 10/01/2018 19:50 (ip-172-18-22-52) $
+		sub-version  IC6.1.8-64b.83 
+Started at:	Nov 20 07:23:55 2021
+Hierarchy:	/opt/eda/cadence/IC618
+User Name:	daruitaka
+Host Name:	eda
+Options:	-cdslibpath /home/daruitaka/EDA/smic018/cdb/cds.lib -lib 
+          smic18mmrf -log cdb2oa.gui.log -appendlog -mapundefinedpingroups 
+          strong 
+Directory:	/home/daruitaka/EDA/smic018
+Log File:	/home/daruitaka/EDA/smic018/cdb2oa.gui.log
+
+	Copyright (C) 2001-2005 Cadence Design Systems, Inc. All rights reserved  worldwide
+********************************************************************************
+
+
+WARNING (CDBOA-406): Directory                                                 
+                     /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/smic18mmrf/3T_DIFF_IND_W8S1D5R30N3/m6_T/symbolic
+                     is in a cellview. The directory and its contents will be  
+                     copied to the destination database but will not be         
+                     translated.
+
+WARNING (CDBOA-406): Directory                                                 
+                     /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/smic18mmrf/3T_DIFF_IND_W8S1D5R30N3/M5_M4/symbolic
+                     is in a cellview. The directory and its contents will be  
+                     copied to the destination database but will not be         
+                     translated.
+
+WARNING (CDBOA-406): Directory                                                 
+                     /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/smic18mmrf/3T_DIFF_IND_W8S1D5R30N3/M1_SUB/symbolic
+                     is in a cellview. The directory and its contents will be  
+                     copied to the destination database but will not be         
+                     translated.
+
+WARNING (CDBOA-406): Directory                                                 
+                     /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/smic18mmrf/3T_DIFF_IND_W8S1D5R30N3/m5_T/symbolic
+                     is in a cellview. The directory and its contents will be  
+                     copied to the destination database but will not be         
+                     translated.
+
+WARNING (CDBOA-406): Directory                                                 
+                     /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/smic18mmrf/3T_DIFF_IND_W8S1D5R30N3/M1_SP/symbolic
+                     is in a cellview. The directory and its contents will be  
+                     copied to the destination database but will not be         
+                     translated.
+
+WARNING (CDBOA-406): Directory                                                 
+                     /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/smic18mmrf/3T_DIFF_IND_W8S1D5R30N3/M3_M2/symbolic
+                     is in a cellview. The directory and its contents will be  
+                     copied to the destination database but will not be         
+                     translated.
+
+WARNING (CDBOA-406): Directory                                                 
+                     /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/smic18mmrf/3T_DIFF_IND_W8S1D5R30N3/m2_T/symbolic
+                     is in a cellview. The directory and its contents will be  
+                     copied to the destination database but will not be         
+                     translated.
+
+WARNING (CDBOA-406): Directory                                                 
+                     /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/smic18mmrf/3T_DIFF_IND_W8S1D5R30N3/M1_NW/symbolic
+                     is in a cellview. The directory and its contents will be  
+                     copied to the destination database but will not be         
+                     translated.
+
+WARNING (CDBOA-406): Directory                                                 
+                     /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/smic18mmrf/3T_DIFF_IND_W8S1D5R30N3/M6_M5/symbolic
+                     is in a cellview. The directory and its contents will be  
+                     copied to the destination database but will not be         
+                     translated.
+
+WARNING (CDBOA-406): Directory                                                 
+                     /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/smic18mmrf/3T_DIFF_IND_W8S1D5R30N3/M1_GT/symbolic
+                     is in a cellview. The directory and its contents will be  
+                     copied to the destination database but will not be         
+                     translated.
+
+WARNING (CDBOA-406): Directory                                                 
+                     /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/smic18mmrf/3T_DIFF_IND_W8S1D5R30N3/M2_M1/symbolic
+                     is in a cellview. The directory and its contents will be  
+                     copied to the destination database but will not be         
+                     translated.
+
+WARNING (CDBOA-406): Directory                                                 
+                     /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/smic18mmrf/3T_DIFF_IND_W8S1D5R30N3/m1_T/symbolic
+                     is in a cellview. The directory and its contents will be  
+                     copied to the destination database but will not be         
+                     translated.
+
+WARNING (CDBOA-406): Directory                                                 
+                     /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/smic18mmrf/3T_DIFF_IND_W8S1D5R30N3/3T_DIFF_IND_W8S1D5R30N3/layout
+                     is in a cellview. The directory and its contents will be  
+                     copied to the destination database but will not be         
+                     translated.
+
+WARNING (CDBOA-406): Directory                                                 
+                     /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/smic18mmrf/3T_DIFF_IND_W8S1D5R30N3/m3_T/symbolic
+                     is in a cellview. The directory and its contents will be  
+                     copied to the destination database but will not be         
+                     translated.
+
+WARNING (CDBOA-406): Directory                                                 
+                     /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/smic18mmrf/3T_DIFF_IND_W8S1D5R30N3/gt_T/symbolic
+                     is in a cellview. The directory and its contents will be  
+                     copied to the destination database but will not be         
+                     translated.
+
+WARNING (CDBOA-406): Directory                                                 
+                     /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/smic18mmrf/3T_DIFF_IND_W8S1D5R30N3/m4_T/symbolic
+                     is in a cellview. The directory and its contents will be  
+                     copied to the destination database but will not be         
+                     translated.
+
+WARNING (CDBOA-406): Directory                                                 
+                     /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/smic18mmrf/3T_DIFF_IND_W8S1D5R30N3/M1_AA/symbolic
+                     is in a cellview. The directory and its contents will be  
+                     copied to the destination database but will not be         
+                     translated.
+
+WARNING (CDBOA-406): Directory                                                 
+                     /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/smic18mmrf/3T_DIFF_IND_W8S1D5R30N3/M4_M3/symbolic
+                     is in a cellview. The directory and its contents will be  
+                     copied to the destination database but will not be         
+                     translated.
+
+WARNING (CDBOA-406): Directory                                                 
+                     /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/smic18mmrf/3T_DIFF_IND_W8S1D5R30N3/M1_SN/symbolic
+                     is in a cellview. The directory and its contents will be  
+                     copied to the destination database but will not be         
+                     translated.
+
+
+********************************************************************************
+Finished at:   Nov 20 07:24:07 2021
+
+104 cells and 748 cellviews were translated from library 'smic18mmrf' in 12.4s.
+In addition:
+1 cell level directory was copied to the OpenAccess library.
+19 cellview level directories were copied to the OpenAccess library.
+
+
+Message Summary:
+
+WARNING (CDBOA-406): Directory <path>/<name> is in a cellview. The directory   
+                     and its contents will be copied to the destination database
+                     but will not be translated.
+                     
+                      Generated 19 times. Neither CDBA nor OpenAccess supports  
+                     directories in cellviews. The directory and its contents   
+                     are copied to the destination library but are not          
+                     translated. This could mean that you end up with CDBA data 
+                     in the OpenAccess version of your library. Check the       
+                     directory in question. If it contains data that needs to be
+                     translated, correct the source data so that it conforms to 
+                     legal directory structure conventions and then run the     
+                     translator again.
+
+********************************************************************************
+
+
+********************************************************************************
+Program:	@(#)$CDS: cdb2oa version 6.1.8-64b 10/01/2018 19:50 (ip-172-18-22-52) $
+		sub-version  IC6.1.8-64b.83 
+Started at:	Nov 20 07:24:07 2021
+Hierarchy:	/opt/eda/cadence/IC618
+User Name:	daruitaka
+Host Name:	eda
+Options:	-cdslibpath /home/daruitaka/EDA/smic018/cdb/cds.lib -lib sealring 
+          -log cdb2oa.gui.log -appendlog -mapundefinedpingroups strong 
+Directory:	/home/daruitaka/EDA/smic018
+Log File:	/home/daruitaka/EDA/smic018/cdb2oa.gui.log
+
+	Copyright (C) 2001-2005 Cadence Design Systems, Inc. All rights reserved  worldwide
+********************************************************************************
+
+
+
+********************************************************************************
+Finished at:   Nov 20 07:24:09 2021
+
+1 cell and 1 cellview were translated from library 'sealring' in 1.1s.
+
+********************************************************************************
+
+

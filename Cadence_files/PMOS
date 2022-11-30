@@ -1,0 +1,910 @@
+'(nil version 1.0 bBox ((128 101) (678 689)))
+(unless printInfoDpl
+printInfoDpl = (ncons nil)
+)
+(unless printInfoDpl->expTable
+printInfoDpl->expTable = (ncons nil)
+)
+printInfoDpl->expTable->waves = (let
+(tmp1)
+tmp1 = nil
+list(tmp1)
+)
+printInfoDpl->expTable->origWaves = (let
+(tmp1)
+tmp1 = nil
+list(tmp1)
+)
+printInfoDpl->expTable->expressions = (let
+(tmp1)
+tmp1 = "MP(\"/M0\" \"??\")"
+list(tmp1)
+)
+printInfoDpl->expTable->aliases = (let
+(tmp1)
+tmp1 = "MP(\"/M0\" \"??\")"
+list(tmp1)
+)
+(unless printInfoDpl->optionDpl
+printInfoDpl->optionDpl = (ncons nil)
+)
+printInfoDpl->optionDpl->format = 'suffix
+printInfoDpl->optionDpl->numSigDigits = 6
+printInfoDpl->optionDpl->linLog = "Linear"
+printInfoDpl->optionDpl->from = nil
+printInfoDpl->optionDpl->to = nil
+printInfoDpl->optionDpl->step = nil
+(unless printInfoDpl->printOptions
+printInfoDpl->printOptions = (ncons nil)
+)
+printInfoDpl->printType = "simple wave"
+printInfoDpl->origStrList = (let
+(tmp1 tmp2 tmp3 tmp4 tmp5 tmp6 tmp7 tmp8 tmp9 tmp10 tmp11 tmp12 tmp13 tmp14 tmp15 tmp16 tmp17 tmp18 tmp19 tmp20 tmp21 tmp22 tmp23 tmp24 tmp25 tmp26 tmp27 tmp28 tmp29 tmp30 tmp31 tmp32 tmp33 tmp34 tmp35 tmp36 tmp37 tmp38 tmp39 tmp40 tmp41 tmp42 tmp43 tmp44 tmp45 tmp46 tmp47 tmp48 tmp49 tmp50 tmp51 tmp52 tmp53 tmp54 tmp55 tmp56 tmp57 tmp58 tmp59 tmp60 tmp61 tmp62 tmp63 tmp64 tmp65 tmp66 tmp67 tmp68 tmp69 tmp70 tmp71 tmp72 tmp73 tmp74 tmp75 tmp76 tmp77 tmp78 tmp79 tmp80 tmp81 tmp82 tmp83 tmp84 tmp85 tmp86 tmp87 tmp88 tmp89 tmp90 tmp91 tmp92 tmp93 tmp94 tmp95 tmp96 tmp97 tmp98 tmp99 tmp100 tmp101 tmp102 tmp103 tmp104 tmp105 tmp106 tmp107 tmp108 tmp109 tmp110 tmp111 tmp112 tmp113 tmp114 tmp115 tmp116 tmp117 tmp118 tmp119 tmp120 tmp121 tmp122 tmp123 tmp124 tmp125 tmp126 tmp127 tmp128 tmp129 tmp130 tmp131 tmp132 tmp133 tmp134 tmp135 tmp136 tmp137 tmp138 tmp139 tmp140 tmp141 tmp142 tmp143 tmp144 tmp145 tmp146 tmp147 tmp148 tmp149 tmp150 tmp151 tmp152 tmp153 tmp154 tmp155 tmp156 tmp157 tmp158 tmp159 tmp160 tmp161 tmp162 tmp163 tmp164 tmp165 tmp166 tmp167 tmp168 tmp169 tmp170 tmp171 tmp172 tmp173 tmp174 tmp175 tmp176 tmp177 tmp178 tmp179 tmp180 tmp181 tmp182 tmp183 tmp184 tmp185 tmp186 tmp187 tmp188 tmp189 tmp190 tmp191 tmp192 tmp193 tmp194 tmp195 tmp196 tmp197 tmp198 tmp199 tmp200 tmp201 tmp202 tmp203 tmp204 tmp205 tmp206 tmp207 tmp208 tmp209 tmp210 tmp211 tmp212 tmp213 tmp214 tmp215 tmp216 tmp217 tmp218 tmp219 tmp220 tmp221 tmp222 tmp223 tmp224 tmp225 tmp226 tmp227 tmp228 tmp229 tmp230 tmp231 tmp232 tmp233 tmp234 tmp235 tmp236 tmp237 tmp238 tmp239 tmp240 tmp241 tmp242 tmp243 tmp244 tmp245 tmp246 tmp247 tmp248 tmp249 tmp250 tmp251 tmp252 tmp253 tmp254 tmp255 tmp256 tmp257 tmp258 tmp259 tmp260 tmp261 tmp262 tmp263 tmp264 tmp265 tmp266 tmp267 tmp268 tmp269 tmp270 tmp271 tmp272 tmp273 tmp274 tmp275 tmp276 tmp277 tmp278 tmp279 tmp280 tmp281 tmp282 tmp283 tmp284 tmp285 tmp286 tmp287 tmp288 tmp289 tmp290 tmp291 tmp292 tmp293 tmp294 tmp295 tmp296 tmp297 tmp298 tmp299 tmp300 tmp301 tmp302 tmp303 tmp304 tmp305 tmp306 tmp307 tmp308 tmp309 tmp310 tmp311 tmp312 tmp313 tmp314 tmp315 tmp316 tmp317 tmp318 tmp319 tmp320 tmp321 tmp322 tmp323 tmp324 tmp325 tmp326 tmp327 tmp328 tmp329 tmp330 tmp331 tmp332 tmp333 tmp334 tmp335 tmp336 tmp337 tmp338 tmp339 tmp340 tmp341 tmp342 tmp343 tmp344 tmp345 tmp346 tmp347 tmp348 tmp349 tmp350 tmp351 tmp352 tmp353 tmp354 tmp355 tmp356 tmp357 tmp358 tmp359 tmp360 tmp361 tmp362 tmp363 tmp364 tmp365 tmp366 tmp367 tmp368 tmp369 tmp370 tmp371 tmp372 tmp373 tmp374 tmp375 tmp376 tmp377 tmp378 tmp379 tmp380 tmp381 tmp382 tmp383 tmp384 tmp385 tmp386 tmp387 tmp388 tmp389 tmp390 tmp391 tmp392 tmp393 tmp394 tmp395 tmp396 tmp397 tmp398 tmp399 tmp400 tmp401 tmp402 tmp403 tmp404 tmp405 tmp406 tmp407 tmp408 tmp409 tmp410 tmp411 tmp412 tmp413 tmp414 tmp415 tmp416 tmp417 tmp418 tmp419 tmp420 tmp421 tmp422 tmp423 tmp424 tmp425 tmp426 tmp427 tmp428 tmp429 tmp430 tmp431 tmp432 tmp433 tmp434 tmp435 tmp436 tmp437 tmp438 tmp439 tmp440 tmp441 tmp442 tmp443 tmp444 tmp445 tmp446 tmp447 tmp448 tmp449 tmp450 tmp451 tmp452 tmp453 tmp454 tmp455 tmp456 tmp457 tmp458 tmp459 tmp460 tmp461 tmp462 tmp463 tmp464 tmp465 tmp466 tmp467 tmp468 tmp469 tmp470 tmp471 tmp472 tmp473 tmp474 tmp475 tmp476 tmp477 tmp478 tmp479 tmp480 tmp481 tmp482 tmp483 tmp484 tmp485 tmp486 tmp487 tmp488 tmp489 tmp490 tmp491 tmp492 tmp493 tmp494 tmp495 tmp496 tmp497 tmp498 tmp499 tmp500 tmp501 tmp502 tmp503 tmp504 tmp505 tmp506 tmp507 tmp508 tmp509 tmp510 tmp511 tmp512 tmp513 tmp514 tmp515 tmp516 tmp517 tmp518 tmp519 tmp520 tmp521 tmp522 tmp523 tmp524 tmp525 tmp526 tmp527 tmp528 tmp529 tmp530 tmp531 tmp532 tmp533 tmp534 tmp535 tmp536 tmp537 tmp538 tmp539 tmp540 tmp541 tmp542 tmp543 tmp544 tmp545 tmp546 tmp547 tmp548 tmp549 tmp550 tmp551 tmp552 tmp553 tmp554 tmp555 tmp556 tmp557 tmp558 tmp559 tmp560 tmp561 tmp562 tmp563 tmp564 tmp565 tmp566 tmp567 tmp568 tmp569 tmp570 tmp571 tmp572 tmp573 tmp574 tmp575 tmp576 tmp577 tmp578 tmp579 tmp580 tmp581 tmp582 tmp583 tmp584 tmp585 tmp586 tmp587 tmp588 tmp589 tmp590 tmp591 tmp592 tmp593 tmp594 tmp595 tmp596 tmp597 tmp598 tmp599 tmp600 tmp601 tmp602 tmp603 tmp604 tmp605 tmp606 tmp607 tmp608 tmp609 tmp610 tmp611 tmp612 tmp613 tmp614 tmp615 tmp616 tmp617 tmp618 tmp619 tmp620 tmp621 tmp622 tmp623 tmp624 tmp625 tmp626 tmp627 tmp628 tmp629 tmp630 tmp631 tmp632 tmp633 tmp634 tmp635 tmp636 tmp637 tmp638 tmp639)
+tmp1 = "signal            MP(\"/M0\" \"??\")"
+tmp2 = "a0                  850m            "
+tmp3 = "a1                    0             "
+tmp4 = "a2                  990m            "
+tmp5 = "acde                550m            "
+tmp6 = "acm                   0             "
+tmp7 = "acnqsmod              0             "
+tmp8 = "ad                    0             "
+tmp9 = "af                    1             "
+tmp10 = "agidl                 0             "
+tmp11 = "agisl                 0             "
+tmp12 = "ags                  40m            "
+tmp13 = "aigbacc              13.6m          "
+tmp14 = "aigbinv              11.1m          "
+tmp15 = "aigc                  9.8m          "
+tmp16 = "aigsd                 9.8m          "
+tmp17 = "alarm                 0             "
+tmp18 = "alpha0                1.34104u      "
+tmp19 = "alpha1               56.1369m       "
+tmp20 = "apwarn                0             "
+tmp21 = "as                    0             "
+tmp22 = "at                   -2K            "
+tmp23 = "b0                   46n            "
+tmp24 = "b1                    0             "
+tmp25 = "beta0                27.5998        "
+tmp26 = "bforward              0             "
+tmp27 = "bgidl                 2.3G          "
+tmp28 = "bgisl                 2.3G          "
+tmp29 = "bigbacc               1.71m         "
+tmp30 = "bigbinv             949u            "
+tmp31 = "bigc                759u            "
+tmp32 = "bigsd               759u            "
+tmp33 = "binflag               NaN           "
+tmp34 = "binunit               2             "
+tmp35 = "bnr                   0             "
+tmp36 = "breverse              0             "
+tmp37 = "bvj               in                "
+tmp38 = "calcacm               2.14748G      "
+tmp39 = "capmod                3             "
+tmp40 = "cbd                   0             "
+tmp41 = "cbs                   0             "
+tmp42 = "cdsc                 45.2639u       "
+tmp43 = "cdscb                 0             "
+tmp44 = "cdscd                 0             "
+tmp45 = "cf                    0             "
+tmp46 = "cforward              0             "
+tmp47 = "cgbo                  NaN           "
+tmp48 = "cgdl                  0             "
+tmp49 = "cgdo                323p            "
+tmp50 = "cgidl               500m            "
+tmp51 = "cgisl               500m            "
+tmp52 = "cgsl                  0             "
+tmp53 = "cgso                323p            "
+tmp54 = "cigbacc              75m            "
+tmp55 = "cigbinv               6m            "
+tmp56 = "cigc                 30m            "
+tmp57 = "cigsd                30m            "
+tmp58 = "cit                 200u            "
+tmp59 = "cj                    1.01m         "
+tmp60 = "cjsw                 89.6p          "
+tmp61 = "cjswg               319p            "
+tmp62 = "ckappa              600m            "
+tmp63 = "clc                 100n            "
+tmp64 = "cle                 600m            "
+tmp65 = "cnr                   0             "
+tmp66 = "compatible            0             "
+tmp67 = "creverse              0             "
+tmp68 = "cta                   0             "
+tmp69 = "ctp                   0             "
+tmp70 = "delta                 8m            "
+tmp71 = "diomod                1             "
+tmp72 = "dlc                   7n            "
+tmp73 = "dlcig                35n            "
+tmp74 = "dnr                   0             "
+tmp75 = "drout               560m            "
+tmp76 = "dskip                 0             "
+tmp77 = "dsub                580m            "
+tmp78 = "dtoxcv                0             "
+tmp79 = "dvt0                  1.8           "
+tmp80 = "dvt0w                 0             "
+tmp81 = "dvt1                710m            "
+tmp82 = "dvt1w                 0             "
+tmp83 = "dvt2                -70m            "
+tmp84 = "dvt2w                 0             "
+tmp85 = "dwb                   8.6n          "
+tmp86 = "dwc                  60n            "
+tmp87 = "dwg                   0             "
+tmp88 = "ef                    1.0829        "
+tmp89 = "eg                    1.12452       "
+tmp90 = "egidl               800m            "
+tmp91 = "egisl               800m            "
+tmp92 = "eglev                 0             "
+tmp93 = "eigbinv               1.1           "
+tmp94 = "elm                   5             "
+tmp95 = "em                   42.4M          "
+tmp96 = "eta0                  5m            "
+tmp97 = "etab                -15m            "
+tmp98 = "fc                  500m            "
+tmp99 = "fcsw                500m            "
+tmp100 = "flkmod                0             "
+tmp101 = "fullreinit            0             "
+tmp102 = "gamma               666.667m        "
+tmp103 = "gamma1                NaN           "
+tmp104 = "gamma2                NaN           "
+tmp105 = "gap1                702u            "
+tmp106 = "gap2                  1.108K        "
+tmp107 = "gdsnoi                NaN           "
+tmp108 = "geo                   0             "
+tmp109 = "hdif                205n            "
+tmp110 = "igbmod                0             "
+tmp111 = "igcmod                0             "
+tmp112 = "ijth                  1             "
+tmp113 = "ijthrev             100m            "
+tmp114 = "imax                  1             "
+tmp115 = "imelt                 1             "
+tmp116 = "is                    NaN           "
+tmp117 = "ivth                  NaN           "
+tmp118 = "ivth_vdsmin           NaN           "
+tmp119 = "ivthl                 NaN           "
+tmp120 = "ivthw                 NaN           "
+tmp121 = "jmax                100M            "
+tmp122 = "jmelt               100M            "
+tmp123 = "js                  168n            "
+tmp124 = "jssw                400f            "
+tmp125 = "jsswg                 0             "
+tmp126 = "jsw                 400f            "
+tmp127 = "jtsd                  0             "
+tmp128 = "jtss                  0             "
+tmp129 = "jtsswd                0             "
+tmp130 = "jtsswgd               0             "
+tmp131 = "jtsswgs               0             "
+tmp132 = "jtssws                0             "
+tmp133 = "k1                  914.574m        "
+tmp134 = "k2                   41.2762m       "
+tmp135 = "k2we                  0             "
+tmp136 = "k3                  129.383m        "
+tmp137 = "k3b                 400m            "
+tmp138 = "keta                 15m            "
+tmp139 = "kf                    0             "
+tmp140 = "kt1                -384.09m         "
+tmp141 = "kt1l                 -6n            "
+tmp142 = "kt2                 -41.5635m       "
+tmp143 = "ku0                   0             "
+tmp144 = "ku0we                 0             "
+tmp145 = "kvsat                 0             "
+tmp146 = "kvth0                 0             "
+tmp147 = "kvth0we               0             "
+tmp148 = "l                     5u            "
+tmp149 = "la0                   0             "
+tmp150 = "la1                   0             "
+tmp151 = "la2                   0             "
+tmp152 = "lacde                 0             "
+tmp153 = "lagidl                0             "
+tmp154 = "lags                  0             "
+tmp155 = "lalpha0               0             "
+tmp156 = "lalpha1               0             "
+tmp157 = "lat                   0             "
+tmp158 = "lb0                   0             "
+tmp159 = "lb1                   0             "
+tmp160 = "lbeta0                0             "
+tmp161 = "lbgidl                0             "
+tmp162 = "lcdsc                 0             "
+tmp163 = "lcdscb                0             "
+tmp164 = "lcdscd                0             "
+tmp165 = "lcf                   0             "
+tmp166 = "lcgdl                 0             "
+tmp167 = "lcgidl                0             "
+tmp168 = "lcgsl                 0             "
+tmp169 = "lcit                  0             "
+tmp170 = "lckappa               0             "
+tmp171 = "lclc                  0             "
+tmp172 = "lcle                  0             "
+tmp173 = "ldelta                0             "
+tmp174 = "ldif                 65n            "
+tmp175 = "ldrout                0             "
+tmp176 = "ldsub                 0             "
+tmp177 = "ldvt0                 0             "
+tmp178 = "ldvt0w                0             "
+tmp179 = "ldvt1                 0             "
+tmp180 = "ldvt1w                0             "
+tmp181 = "ldvt2                 0             "
+tmp182 = "ldvt2w                0             "
+tmp183 = "ldwb                  0             "
+tmp184 = "ldwg                  0             "
+tmp185 = "legidl                0             "
+tmp186 = "lelm                  0             "
+tmp187 = "leta0                 0             "
+tmp188 = "letab                 0             "
+tmp189 = "level                11             "
+tmp190 = "lgamma1               0             "
+tmp191 = "lgamma2               0             "
+tmp192 = "lgcd                  0             "
+tmp193 = "lgcs                  0             "
+tmp194 = "lint                 35n            "
+tmp195 = "lintnoi               0             "
+tmp196 = "lk1                   0             "
+tmp197 = "lk2                   0             "
+tmp198 = "lk2we                 0             "
+tmp199 = "lk3                   0             "
+tmp200 = "lk3b                  0             "
+tmp201 = "lketa               -10n            "
+tmp202 = "lkt1                  0             "
+tmp203 = "lkt1l                 0             "
+tmp204 = "lkt2                  0             "
+tmp205 = "lku0                  0             "
+tmp206 = "lku0we                0             "
+tmp207 = "lkvth0                0             "
+tmp208 = "lkvth0we              0             "
+tmp209 = "ll                    5.5f          "
+tmp210 = "llc                   5.5f          "
+tmp211 = "lln                   1.04717       "
+tmp212 = "llodku0               0             "
+tmp213 = "llodvth               0             "
+tmp214 = "lmax                 10u            "
+tmp215 = "lmin                260n            "
+tmp216 = "lmlt                  1             "
+tmp217 = "lmoin                 0             "
+tmp218 = "lnch                  0             "
+tmp219 = "lnfactor              0             "
+tmp220 = "lngate                0             "
+tmp221 = "lnlx                  0             "
+tmp222 = "lnoff                 0             "
+tmp223 = "lnsub                 0             "
+tmp224 = "lodeta0               0             "
+tmp225 = "lodk2                 0             "
+tmp226 = "lpclm                 0             "
+tmp227 = "lpdiblc1              0             "
+tmp228 = "lpdiblc2              0             "
+tmp229 = "lpdiblcb              0             "
+tmp230 = "lprt                  0             "
+tmp231 = "lprwb                 0             "
+tmp232 = "lprwg                 0             "
+tmp233 = "lpscbe1               0             "
+tmp234 = "lpscbe2               0             "
+tmp235 = "lpvag                 0             "
+tmp236 = "lrdsw                 0             "
+tmp237 = "lref                  NaN           "
+tmp238 = "lu0                -415.007p        "
+tmp239 = "lua                  15a            "
+tmp240 = "lua1                  0             "
+tmp241 = "lub               -7e-27            "
+tmp242 = "lub1                  0             "
+tmp243 = "luc                   4a            "
+tmp244 = "luc1                  0             "
+tmp245 = "lute                  0             "
+tmp246 = "lvbm                  0             "
+tmp247 = "lvbx                  0             "
+tmp248 = "lvfb                  0             "
+tmp249 = "lvfbcv                0             "
+tmp250 = "lvoff                 1.8n          "
+tmp251 = "lvoffcv               0             "
+tmp252 = "lvsat                 0             "
+tmp253 = "lvth0                 0             "
+tmp254 = "lvtho                 0             "
+tmp255 = "lw                  -47.1604f       "
+tmp256 = "lw0                   0             "
+tmp257 = "lwc                 -47.1604f       "
+tmp258 = "lwl                 700.545y        "
+tmp259 = "lwlc                700.545y        "
+tmp260 = "lwn                 953.09m         "
+tmp261 = "lwr                   0             "
+tmp262 = "lxj                   0             "
+tmp263 = "lxt                   0             "
+tmp264 = "mbe0                  0             "
+tmp265 = "mbewl                 0             "
+tmp266 = "meto                  0             "
+tmp267 = "minr                  1m            "
+tmp268 = "mismatchdist          0             "
+tmp269 = "mismatchmod           0             "
+tmp270 = "mj                  401m            "
+tmp271 = "mjsw                450m            "
+tmp272 = "mjswg               450m            "
+tmp273 = "mnr                  21             "
+tmp274 = "mobmod                1             "
+tmp275 = "moin                 15             "
+tmp276 = "msgskip               0             "
+tmp277 = "mvt0                  0             "
+tmp278 = "mvtwl                 0             "
+tmp279 = "mvtwl2                0             "
+tmp280 = "n                     1.07          "
+tmp281 = "nch                 548.52P         "
+tmp282 = "nds                   1             "
+tmp283 = "nfactor               1.1           "
+tmp284 = "ngate               116E            "
+tmp285 = "nigbacc               1             "
+tmp286 = "nigbinv               3             "
+tmp287 = "nigc                  1             "
+tmp288 = "nj                    1             "
+tmp289 = "njts                 60             "
+tmp290 = "njtsd                60             "
+tmp291 = "njtssw               60             "
+tmp292 = "njtsswd              60             "
+tmp293 = "njtsswg              60             "
+tmp294 = "njtsswgd             60             "
+tmp295 = "nlev                  2.14748G      "
+tmp296 = "nlx                  12n            "
+tmp297 = "noff                565m            "
+tmp298 = "noia                 35.911E        "
+tmp299 = "noib                  3.0215K       "
+tmp300 = "noic                  6.7064p       "
+tmp301 = "noid                200T            "
+tmp302 = "noimod                2             "
+tmp303 = "nqsmod                0             "
+tmp304 = "nrd                   0             "
+tmp305 = "nrfwd                 1             "
+tmp306 = "nrs                   0             "
+tmp307 = "nsub                 60P            "
+tmp308 = "ntox                  1             "
+tmp309 = "pa0                   0             "
+tmp310 = "pa1                   0             "
+tmp311 = "pa2                   0             "
+tmp312 = "pacde                 0             "
+tmp313 = "pagidl                0             "
+tmp314 = "pags                  0             "
+tmp315 = "palpha0               0             "
+tmp316 = "palpha1               0             "
+tmp317 = "paramchk              1             "
+tmp318 = "pat                  -7.5n          "
+tmp319 = "pb                  807m            "
+tmp320 = "pb0                   0             "
+tmp321 = "pb1                   0             "
+tmp322 = "pbeta0                0             "
+tmp323 = "pbgidl                0             "
+tmp324 = "pbsw                  1             "
+tmp325 = "pbswg                 1             "
+tmp326 = "pcdsc                 0             "
+tmp327 = "pcdscb                0             "
+tmp328 = "pcdscd                0             "
+tmp329 = "pcf                   0             "
+tmp330 = "pcgdl                 0             "
+tmp331 = "pcgidl                0             "
+tmp332 = "pcgsl                 0             "
+tmp333 = "pcit                  0             "
+tmp334 = "pckappa               0             "
+tmp335 = "pclc                  0             "
+tmp336 = "pcle                  0             "
+tmp337 = "pclm                600m            "
+tmp338 = "pd                    0             "
+tmp339 = "pdelta              400a            "
+tmp340 = "pdiblc1               6m            "
+tmp341 = "pdiblc2             250u            "
+tmp342 = "pdiblcb               0             "
+tmp343 = "pdrout                0             "
+tmp344 = "pdsub                 0             "
+tmp345 = "pdvt0                 0             "
+tmp346 = "pdvt0w                0             "
+tmp347 = "pdvt1                 0             "
+tmp348 = "pdvt1w                0             "
+tmp349 = "pdvt2                 0             "
+tmp350 = "pdvt2w                0             "
+tmp351 = "pdwb                  0             "
+tmp352 = "pdwg                  0             "
+tmp353 = "pegidl                0             "
+tmp354 = "pelm                  0             "
+tmp355 = "peta0                 7f            "
+tmp356 = "petab                -2f            "
+tmp357 = "pgamma1               0             "
+tmp358 = "pgamma2               0             "
+tmp359 = "pigcd                 1             "
+tmp360 = "pk1                 -17f            "
+tmp361 = "pk2                   0             "
+tmp362 = "pk2we                 0             "
+tmp363 = "pk3                   0             "
+tmp364 = "pk3b                  0             "
+tmp365 = "pketa                -6f            "
+tmp366 = "pkt1                  5f            "
+tmp367 = "pkt1l                 0             "
+tmp368 = "pkt2                  0             "
+tmp369 = "pku0                  0             "
+tmp370 = "pku0we                0             "
+tmp371 = "pkvth0                0             "
+tmp372 = "pkvth0we              0             "
+tmp373 = "pmoin                 0             "
+tmp374 = "pnch                  0             "
+tmp375 = "pnfactor            -40f            "
+tmp376 = "pngate                0             "
+tmp377 = "pnlx                  0             "
+tmp378 = "pnoff                 0             "
+tmp379 = "pnsub                 0             "
+tmp380 = "poxedge               1             "
+tmp381 = "ppclm               130f            "
+tmp382 = "ppdiblc1              0             "
+tmp383 = "ppdiblc2              0             "
+tmp384 = "ppdiblcb              0             "
+tmp385 = "pprt                  0             "
+tmp386 = "pprwb                 0             "
+tmp387 = "pprwg                 0             "
+tmp388 = "ppscbe1              -7u            "
+tmp389 = "ppscbe2               0             "
+tmp390 = "ppvag                 0             "
+tmp391 = "prdsw                 0             "
+tmp392 = "prt                 130             "
+tmp393 = "prwb                  0             "
+tmp394 = "prwg                  6.37557m      "
+tmp395 = "ps                    0             "
+tmp396 = "pscbe1              330M            "
+tmp397 = "pscbe2              200n            "
+tmp398 = "pta                   0             "
+tmp399 = "ptp                   0             "
+tmp400 = "pu0                -379.996a        "
+tmp401 = "pua                 -11y            "
+tmp402 = "pua1                 10y            "
+tmp403 = "pub                   0             "
+tmp404 = "pub1                  0             "
+tmp405 = "puc                   5y            "
+tmp406 = "puc1                  0             "
+tmp407 = "pute                  0             "
+tmp408 = "pvag                  0             "
+tmp409 = "pvbm                  0             "
+tmp410 = "pvbx                  0             "
+tmp411 = "pvfb                  0             "
+tmp412 = "pvfbcv                0             "
+tmp413 = "pvoff                -3f            "
+tmp414 = "pvoffcv               0             "
+tmp415 = "pvsat                -5.8n          "
+tmp416 = "pvth0                 6f            "
+tmp417 = "pvtho                 6f            "
+tmp418 = "pw0                   0             "
+tmp419 = "pwr                   0             "
+tmp420 = "pxj                   0             "
+tmp421 = "pxt                   0             "
+tmp422 = "rd                    0             "
+tmp423 = "rdc                   1             "
+tmp424 = "rdd                   0             "
+tmp425 = "rdsw                950             "
+tmp426 = "rs                    0             "
+tmp427 = "rsc                   1             "
+tmp428 = "rsh                   9.8           "
+tmp429 = "rss                   0             "
+tmp430 = "sa0                   1u            "
+tmp431 = "saref                 1u            "
+tmp432 = "sb0                   1u            "
+tmp433 = "sbref                 1u            "
+tmp434 = "sc                   -1             "
+tmp435 = "scref                 1u            "
+tmp436 = "shrink                NaN           "
+tmp437 = "shrink2               NaN           "
+tmp438 = "steta0                0             "
+tmp439 = "stimod                2.14748G      "
+tmp440 = "stk2                  0             "
+tmp441 = "tcc                   0             "
+tmp442 = "tcj                 883u            "
+tmp443 = "tcjsw               709u            "
+tmp444 = "tcjswg              709u            "
+tmp445 = "tcnr                  0             "
+tmp446 = "tdnr                  0             "
+tmp447 = "tku0                  0             "
+tmp448 = "tlev                  0             "
+tmp449 = "tlevc                 1             "
+tmp450 = "tmnr                  0             "
+tmp451 = "tnjts                 0             "
+tmp452 = "tnjtsd                0             "
+tmp453 = "tnjtssw               0             "
+tmp454 = "tnjtsswd              0             "
+tmp455 = "tnjtsswg              0             "
+tmp456 = "tnjtsswgd             0             "
+tmp457 = "tnom                 25             "
+tmp458 = "tox                   6.62n         "
+tmp459 = "toxe                  6.62n         "
+tmp460 = "toxm                  6.62n         "
+tmp461 = "toxref                3n            "
+tmp462 = "tpb                   1.57m         "
+tmp463 = "tpbsw                 1.37m         "
+tmp464 = "tpbswg                1.37m         "
+tmp465 = "trd                   0             "
+tmp466 = "trise                 0             "
+tmp467 = "trs                   0             "
+tmp468 = "tt                    0             "
+tmp469 = "type                  1             "
+tmp470 = "u0                    9.25m         "
+tmp471 = "ua                  315p            "
+tmp472 = "ua1                 300p            "
+tmp473 = "ub                    1.04442a      "
+tmp474 = "ub1                  -2.07047a      "
+tmp475 = "uc                  -35p            "
+tmp476 = "uc1                 -50p            "
+tmp477 = "ute                  -1.32361       "
+tmp478 = "vbd_max               NaN           "
+tmp479 = "vbdr_max              NaN           "
+tmp480 = "vbm                  -3             "
+tmp481 = "vbox                 19.86          "
+tmp482 = "vbs_max               NaN           "
+tmp483 = "vbsr_max              NaN           "
+tmp484 = "vbx                   NaN           "
+tmp485 = "vds_max               NaN           "
+tmp486 = "version               3.24          "
+tmp487 = "vfb                  -1             "
+tmp488 = "vfbcv                -1             "
+tmp489 = "vfbflag               2.14748G      "
+tmp490 = "vgb_max               NaN           "
+tmp491 = "vgbr_max              NaN           "
+tmp492 = "vgd_max               NaN           "
+tmp493 = "vgdr_max              NaN           "
+tmp494 = "vgs_max               NaN           "
+tmp495 = "vgsr_max              NaN           "
+tmp496 = "vnds                 -1             "
+tmp497 = "voff               -100m            "
+tmp498 = "voffcv                0             "
+tmp499 = "vsat                 85.5K          "
+tmp500 = "vthmod               -1             "
+tmp501 = "vtho               -672m            "
+tmp502 = "vtsd                 10             "
+tmp503 = "vtss                 10             "
+tmp504 = "vtsswd               10             "
+tmp505 = "vtsswgd              10             "
+tmp506 = "vtsswgs              10             "
+tmp507 = "vtssws               10             "
+tmp508 = "w                     5u            "
+tmp509 = "w0                    1.00211n      "
+tmp510 = "wa0                   0             "
+tmp511 = "wa1                   0             "
+tmp512 = "wa2                   0             "
+tmp513 = "wacde                 0             "
+tmp514 = "wagidl                0             "
+tmp515 = "wags                  0             "
+tmp516 = "walpha0               0             "
+tmp517 = "walpha1               0             "
+tmp518 = "warn                  1             "
+tmp519 = "wat                   0             "
+tmp520 = "wb0                   0             "
+tmp521 = "wb1                   0             "
+tmp522 = "wbeta0                0             "
+tmp523 = "wbgidl                0             "
+tmp524 = "wcdsc                 0             "
+tmp525 = "wcdscb                0             "
+tmp526 = "wcdscd                0             "
+tmp527 = "wcf                   0             "
+tmp528 = "wcgdl                 0             "
+tmp529 = "wcgidl                0             "
+tmp530 = "wcgsl                 0             "
+tmp531 = "wcit                  0             "
+tmp532 = "wckappa               0             "
+tmp533 = "wclc                  0             "
+tmp534 = "wcle                  0             "
+tmp535 = "wdelta                0             "
+tmp536 = "wdrout                0             "
+tmp537 = "wdsub                 0             "
+tmp538 = "wdvt0                 0             "
+tmp539 = "wdvt0w                0             "
+tmp540 = "wdvt1                 0             "
+tmp541 = "wdvt1w                0             "
+tmp542 = "wdvt2                 0             "
+tmp543 = "wdvt2w                0             "
+tmp544 = "wdwb                  0             "
+tmp545 = "wdwg                  0             "
+tmp546 = "web                   0             "
+tmp547 = "wec                   0             "
+tmp548 = "wegidl                0             "
+tmp549 = "welm                  0             "
+tmp550 = "weta0                 0             "
+tmp551 = "wetab                 0             "
+tmp552 = "wgamma1               0             "
+tmp553 = "wgamma2               0             "
+tmp554 = "wint                 13n            "
+tmp555 = "wk1                   0             "
+tmp556 = "wk2                   0             "
+tmp557 = "wk2we                 0             "
+tmp558 = "wk3                   0             "
+tmp559 = "wk3b                  0             "
+tmp560 = "wketa                 1n            "
+tmp561 = "wkt1               -943.334p        "
+tmp562 = "wkt1l                 0             "
+tmp563 = "wkt2                  0             "
+tmp564 = "wku0                  0             "
+tmp565 = "wku0we                0             "
+tmp566 = "wkvth0                0             "
+tmp567 = "wkvth0we              0             "
+tmp568 = "wl                  -31.4912f       "
+tmp569 = "wlc                 -31.4912f       "
+tmp570 = "wln                   1.02576       "
+tmp571 = "wlod                  0             "
+tmp572 = "wlodku0               0             "
+tmp573 = "wlodvth               0             "
+tmp574 = "wmax                100u            "
+tmp575 = "wmin                190n            "
+tmp576 = "wmlt                  1             "
+tmp577 = "wmoin                 0             "
+tmp578 = "wnch                  0             "
+tmp579 = "wnfactor              0             "
+tmp580 = "wngate                0             "
+tmp581 = "wnlx                  0             "
+tmp582 = "wnoff                 0             "
+tmp583 = "wnoi                 10u            "
+tmp584 = "wnsub                 0             "
+tmp585 = "wpclm                 0             "
+tmp586 = "wpdiblc1              0             "
+tmp587 = "wpdiblc2             80p            "
+tmp588 = "wpdiblcb              0             "
+tmp589 = "wpemod                0             "
+tmp590 = "wprt                  0             "
+tmp591 = "wprwb                 0             "
+tmp592 = "wprwg                 0             "
+tmp593 = "wpscbe1               0             "
+tmp594 = "wpscbe2               0             "
+tmp595 = "wpvag                 0             "
+tmp596 = "wr                    1             "
+tmp597 = "wrdsw                 0             "
+tmp598 = "wref                  NaN           "
+tmp599 = "wu0                  -1.70015p      "
+tmp600 = "wua                -167.632a        "
+tmp601 = "wua1                  8a            "
+tmp602 = "wub                   0             "
+tmp603 = "wub1              140e-27           "
+tmp604 = "wuc                   0             "
+tmp605 = "wuc1                  0             "
+tmp606 = "wute                  0             "
+tmp607 = "wvbm                  0             "
+tmp608 = "wvbx                  0             "
+tmp609 = "wvfb                  0             "
+tmp610 = "wvfbcv                0             "
+tmp611 = "wvoff                 0             "
+tmp612 = "wvoffcv               0             "
+tmp613 = "wvsat                 0             "
+tmp614 = "wvth0                 4n            "
+tmp615 = "wvtho                 4n            "
+tmp616 = "ww                    2.3f          "
+tmp617 = "ww0                   0             "
+tmp618 = "wwc                   2.3f          "
+tmp619 = "wwl                -241.672y        "
+tmp620 = "wwlc               -241.672y        "
+tmp621 = "wwn                 961.77m         "
+tmp622 = "wwr                   0             "
+tmp623 = "wxj                   0             "
+tmp624 = "wxt                   0             "
+tmp625 = "xj                  170n            "
+tmp626 = "xjbv                  1             "
+tmp627 = "xl                  -17n            "
+tmp628 = "xlref                 0             "
+tmp629 = "xpart                 1             "
+tmp630 = "xt                  155n            "
+tmp631 = "xti                   3             "
+tmp632 = "xtsd                 20m            "
+tmp633 = "xtss                 20m            "
+tmp634 = "xtsswd               20m            "
+tmp635 = "xtsswgd              20m            "
+tmp636 = "xtsswgs              20m            "
+tmp637 = "xtssws               20m            "
+tmp638 = "xw                    0             "
+tmp639 = "xwref                 0             "
+list(tmp1 tmp2 tmp3 tmp4 tmp5 tmp6 tmp7 tmp8 tmp9 tmp10 tmp11 tmp12 tmp13 tmp14 tmp15 tmp16 tmp17 tmp18 tmp19 tmp20 tmp21 tmp22 tmp23 tmp24 tmp25 tmp26 tmp27 tmp28 tmp29 tmp30 tmp31 tmp32 tmp33 tmp34 tmp35 tmp36 tmp37 tmp38 tmp39 tmp40 tmp41 tmp42 tmp43 tmp44 tmp45 tmp46 tmp47 tmp48 tmp49 tmp50 tmp51 tmp52 tmp53 tmp54 tmp55 tmp56 tmp57 tmp58 tmp59 tmp60 tmp61 tmp62 tmp63 tmp64 tmp65 tmp66 tmp67 tmp68 tmp69 tmp70 tmp71 tmp72 tmp73 tmp74 tmp75 tmp76 tmp77 tmp78 tmp79 tmp80 tmp81 tmp82 tmp83 tmp84 tmp85 tmp86 tmp87 tmp88 tmp89 tmp90 tmp91 tmp92 tmp93 tmp94 tmp95 tmp96 tmp97 tmp98 tmp99 tmp100 tmp101 tmp102 tmp103 tmp104 tmp105 tmp106 tmp107 tmp108 tmp109 tmp110 tmp111 tmp112 tmp113 tmp114 tmp115 tmp116 tmp117 tmp118 tmp119 tmp120 tmp121 tmp122 tmp123 tmp124 tmp125 tmp126 tmp127 tmp128 tmp129 tmp130 tmp131 tmp132 tmp133 tmp134 tmp135 tmp136 tmp137 tmp138 tmp139 tmp140 tmp141 tmp142 tmp143 tmp144 tmp145 tmp146 tmp147 tmp148 tmp149 tmp150 tmp151 tmp152 tmp153 tmp154 tmp155 tmp156 tmp157 tmp158 tmp159 tmp160 tmp161 tmp162 tmp163 tmp164 tmp165 tmp166 tmp167 tmp168 tmp169 tmp170 tmp171 tmp172 tmp173 tmp174 tmp175 tmp176 tmp177 tmp178 tmp179 tmp180 tmp181 tmp182 tmp183 tmp184 tmp185 tmp186 tmp187 tmp188 tmp189 tmp190 tmp191 tmp192 tmp193 tmp194 tmp195 tmp196 tmp197 tmp198 tmp199 tmp200 tmp201 tmp202 tmp203 tmp204 tmp205 tmp206 tmp207 tmp208 tmp209 tmp210 tmp211 tmp212 tmp213 tmp214 tmp215 tmp216 tmp217 tmp218 tmp219 tmp220 tmp221 tmp222 tmp223 tmp224 tmp225 tmp226 tmp227 tmp228 tmp229 tmp230 tmp231 tmp232 tmp233 tmp234 tmp235 tmp236 tmp237 tmp238 tmp239 tmp240 tmp241 tmp242 tmp243 tmp244 tmp245 tmp246 tmp247 tmp248 tmp249 tmp250 tmp251 tmp252 tmp253 tmp254 tmp255 tmp256 tmp257 tmp258 tmp259 tmp260 tmp261 tmp262 tmp263 tmp264 tmp265 tmp266 tmp267 tmp268 tmp269 tmp270 tmp271 tmp272 tmp273 tmp274 tmp275 tmp276 tmp277 tmp278 tmp279 tmp280 tmp281 tmp282 tmp283 tmp284 tmp285 tmp286 tmp287 tmp288 tmp289 tmp290 tmp291 tmp292 tmp293 tmp294 tmp295 tmp296 tmp297 tmp298 tmp299 tmp300 tmp301 tmp302 tmp303 tmp304 tmp305 tmp306 tmp307 tmp308 tmp309 tmp310 tmp311 tmp312 tmp313 tmp314 tmp315 tmp316 tmp317 tmp318 tmp319 tmp320 tmp321 tmp322 tmp323 tmp324 tmp325 tmp326 tmp327 tmp328 tmp329 tmp330 tmp331 tmp332 tmp333 tmp334 tmp335 tmp336 tmp337 tmp338 tmp339 tmp340 tmp341 tmp342 tmp343 tmp344 tmp345 tmp346 tmp347 tmp348 tmp349 tmp350 tmp351 tmp352 tmp353 tmp354 tmp355 tmp356 tmp357 tmp358 tmp359 tmp360 tmp361 tmp362 tmp363 tmp364 tmp365 tmp366 tmp367 tmp368 tmp369 tmp370 tmp371 tmp372 tmp373 tmp374 tmp375 tmp376 tmp377 tmp378 tmp379 tmp380 tmp381 tmp382 tmp383 tmp384 tmp385 tmp386 tmp387 tmp388 tmp389 tmp390 tmp391 tmp392 tmp393 tmp394 tmp395 tmp396 tmp397 tmp398 tmp399 tmp400 tmp401 tmp402 tmp403 tmp404 tmp405 tmp406 tmp407 tmp408 tmp409 tmp410 tmp411 tmp412 tmp413 tmp414 tmp415 tmp416 tmp417 tmp418 tmp419 tmp420 tmp421 tmp422 tmp423 tmp424 tmp425 tmp426 tmp427 tmp428 tmp429 tmp430 tmp431 tmp432 tmp433 tmp434 tmp435 tmp436 tmp437 tmp438 tmp439 tmp440 tmp441 tmp442 tmp443 tmp444 tmp445 tmp446 tmp447 tmp448 tmp449 tmp450 tmp451 tmp452 tmp453 tmp454 tmp455 tmp456 tmp457 tmp458 tmp459 tmp460 tmp461 tmp462 tmp463 tmp464 tmp465 tmp466 tmp467 tmp468 tmp469 tmp470 tmp471 tmp472 tmp473 tmp474 tmp475 tmp476 tmp477 tmp478 tmp479 tmp480 tmp481 tmp482 tmp483 tmp484 tmp485 tmp486 tmp487 tmp488 tmp489 tmp490 tmp491 tmp492 tmp493 tmp494 tmp495 tmp496 tmp497 tmp498 tmp499 tmp500 tmp501 tmp502 tmp503 tmp504 tmp505 tmp506 tmp507 tmp508 tmp509 tmp510 tmp511 tmp512 tmp513 tmp514 tmp515 tmp516 tmp517 tmp518 tmp519 tmp520 tmp521 tmp522 tmp523 tmp524 tmp525 tmp526 tmp527 tmp528 tmp529 tmp530 tmp531 tmp532 tmp533 tmp534 tmp535 tmp536 tmp537 tmp538 tmp539 tmp540 tmp541 tmp542 tmp543 tmp544 tmp545 tmp546 tmp547 tmp548 tmp549 tmp550 tmp551 tmp552 tmp553 tmp554 tmp555 tmp556 tmp557 tmp558 tmp559 tmp560 tmp561 tmp562 tmp563 tmp564 tmp565 tmp566 tmp567 tmp568 tmp569 tmp570 tmp571 tmp572 tmp573 tmp574 tmp575 tmp576 tmp577 tmp578 tmp579 tmp580 tmp581 tmp582 tmp583 tmp584 tmp585 tmp586 tmp587 tmp588 tmp589 tmp590 tmp591 tmp592 tmp593 tmp594 tmp595 tmp596 tmp597 tmp598 tmp599 tmp600 tmp601 tmp602 tmp603 tmp604 tmp605 tmp606 tmp607 tmp608 tmp609 tmp610 tmp611 tmp612 tmp613 tmp614 tmp615 tmp616 tmp617 tmp618 tmp619 tmp620 tmp621 tmp622 tmp623 tmp624 tmp625 tmp626 tmp627 tmp628 tmp629 tmp630 tmp631 tmp632 tmp633 tmp634 tmp635 tmp636 tmp637 tmp638 tmp639)
+)
+printInfoDpl->title = nil
+printInfoDpl->xCol = nil
+printInfoDpl->width = 14
+printInfoDpl->numSpaces = 4
+printInfoDpl->noMerge = nil
+printInfoDpl->resultsDir = nil
+printInfoDpl->resultName = nil
+printInfoDpl->unitList = (let
+(tmp1 tmp2)
+tmp1 = ""
+tmp2 = ""
+list(tmp1 tmp2)
+)
+printInfoDpl->waveNameList = (let
+(tmp1 tmp2)
+tmp1 = "signal"
+tmp2 = "MP(\"/M0\" \"??\")"
+list(tmp1 tmp2)
+)
+(unless printInfoDpl->context
+printInfoDpl->context = (ncons nil)
+)
+printInfoDpl->context->runObjFile = "runObjFile"
+printInfoDpl->context->netlistDir = "/home/AnalogIC1/stu23/simulation/parameter/spectre/schematic/netlist"
+printInfoDpl->context->relativeDir = "/home/AnalogIC1/stu23/simulation/parameter/spectre"
+printInfoDpl->context->dataDir = "/home/AnalogIC1/stu23/simulation/parameter/spectre/schematic"
+(unless printInfoDpl->context->cache
+printInfoDpl->context->cache = (ncons nil)
+)
+printInfoDpl->context->cache->VDC = (let
+(tmp1 tmp2 tmp3 tmp4 tmp5 tmp6 tmp7 tmp8 tmp9 tmp10 tmp11 tmp12 tmp13 tmp14 tmp15 tmp16)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = "/vdd!"
+tmp2 = "/home/AnalogIC1/stu23/simulation/parameter/spectre/schematic"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+tmp2 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = "/vdd!"
+tmp2 = "/home/AnalogIC1/stu23/simulation/parameter/spectre/schematic"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+tmp3 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = "/net2"
+tmp2 = "/home/AnalogIC1/stu23/simulation/parameter/spectre/schematic"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+tmp4 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = "/net2"
+tmp2 = "/home/AnalogIC1/stu23/simulation/parameter/spectre/schematic"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+tmp5 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = "/vdd!"
+tmp2 = "/home/AnalogIC1/stu23/simulation/parameter/spectre/schematic"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+tmp6 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = "/vdd!"
+tmp2 = "/home/AnalogIC1/stu23/simulation/parameter/spectre/schematic"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+tmp7 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = "/gnd!"
+tmp2 = "/home/AnalogIC1/stu23/simulation/parameter/spectre/schematic"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+tmp8 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = "/gnd!"
+tmp2 = "/home/AnalogIC1/stu23/simulation/parameter/spectre/schematic"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+tmp9 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = "/vdd!"
+tmp2 = "/home/AnalogIC1/stu23/simulation/parameter/spectre/schematic"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+tmp10 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = "/vdd!"
+tmp2 = "/home/AnalogIC1/stu23/simulation/parameter/spectre/schematic"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+tmp11 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = "/net2"
+tmp2 = "/home/AnalogIC1/stu23/simulation/parameter/spectre/schematic"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+tmp12 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = "/net2"
+tmp2 = "/home/AnalogIC1/stu23/simulation/parameter/spectre/schematic"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+tmp13 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = "/vdd!"
+tmp2 = "/home/AnalogIC1/stu23/simulation/parameter/spectre/schematic"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+tmp14 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = "/vdd!"
+tmp2 = "/home/AnalogIC1/stu23/simulation/parameter/spectre/schematic"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+tmp15 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = "/gnd!"
+tmp2 = "/home/AnalogIC1/stu23/simulation/parameter/spectre/schematic"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+tmp16 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = "/gnd!"
+tmp2 = "/home/AnalogIC1/stu23/simulation/parameter/spectre/schematic"
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2)
+)
+list(tmp1 tmp2 tmp3 tmp4 tmp5 tmp6 tmp7 tmp8 tmp9 tmp10 tmp11 tmp12 tmp13 tmp14 tmp15 tmp16)
+)
+printInfoDpl->context->cache->MP = (let
+(tmp1)
+tmp1 = (let
+(tmp1 tmp2)
+tmp1 = (let
+(tmp1 tmp2 tmp3)
+tmp1 = "/M0"
+tmp2 = "/home/AnalogIC1/stu23/simulation/parameter/spectre/schematic"
+tmp3 = "??"
+list(tmp1 tmp2 tmp3)
+)
+tmp2 = nil
+list(tmp1 tmp2)
+)
+list(tmp1)
+)
+printInfoDpl->context->cache->opPointDevices = (let
+(tmp1 tmp2 tmp3)
+tmp1 = (let
+(tmp1 tmp2 tmp3)
+tmp1 = "M0"
+tmp2 = "V0"
+tmp3 = "V1"
+list(tmp1 tmp2 tmp3)
+)
+tmp2 = 0
+tmp3 = 'MP
+list(tmp1 tmp2 tmp3)
+)
+printInfoDpl->context->simData = nil
+printInfoDpl->context->simulator = "spectre"
+printInfoDpl->realExpList = nil
+printInfoDpl->saveLoadFile = "PMOS"
+printInfoDpl->saveNeeded = nil

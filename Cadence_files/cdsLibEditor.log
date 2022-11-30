@@ -1,0 +1,17 @@
+\o Program:		@(#)$CDS: cdsLibEditor version 6.1.7 - CAT35 07/19/2018 21:11 (sjfnl053) $
+\o Sub version:		sub-version  s221 
+\o Arguments:		-cdslib /home/AnalogIC1/stu23/smic018/cds.lib -mpssession virtuoso192131 -mpshost dell01 
+\o Working Directory:	dell01:/home/AnalogIC1/stu23/smic018
+\o 64-bit offsets
+\a nrSetWindowVisibility(cdsLibEditor "show")
+\o Qt version: 		4.8.5
+\a nrSetCurrentWindow(cdsLibEditor)
+\a nrListItemAction(cdsLibEditor->mainTable 0 0)
+\o Active cell: 0 0 "cdsDefTechLib"
+\a nrResizeWindow(cdsLibEditor list(0 25 500 400))
+\a nrListItemAction(cdsLibEditor->mainTable 8 0)
+\o Active cell: 8 0 ""
+\a nrSetCurrentWindow(cdsLibEditor)
+\a cdsLibEditor->fileExitButton->value = t
+\a nrSetWindowVisibility(cdsLibEditor "hide")
+\a exit(0)

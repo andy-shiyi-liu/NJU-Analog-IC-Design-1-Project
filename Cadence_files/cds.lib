@@ -1,0 +1,13 @@
+# File Created by  at Tue May 10 14:56:57 2022
+# assisted by CdsLibEditor
+DEFINE cdsDefTechLib $CDSHOME/tools/dfII/etc/cdsDefTechLib
+DEFINE basic $CDSHOME/tools/dfII/etc/cdslib/basic
+DEFINE analogLib $CDSHOME/tools/dfII/etc/cdslib/artist/analogLib
+DEFINE smic18mmrf /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808//smic18mmrf
+DEFINE sealring /TOOLS/PDK/SMIC/SPDK18MMRF_1833_CDS_v2.0/smic18mmrf_1P6M_200709151808/sealring
+DEFINE MF21230158 /home/AnalogIC1/stu23/smic018/MF21230158
+#Removed by ddDeleteObj: DEFINE Vref /home/AnalogIC1/stu23/smic018/Vref
+DEFINE test /home/AnalogIC1/stu23/smic018/test
+#Removed by ddDeleteObj: DEFINE layout /home/AnalogIC1/stu23/smic018/layout
+DEFINE switch /home/AnalogIC1/stu1/smic018/switch
+DEFINE learning /home/AnalogIC1/stu23/smic018/learning
