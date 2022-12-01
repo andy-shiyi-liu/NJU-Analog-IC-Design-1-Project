@@ -11,3 +11,4 @@ DEFINE test /home/AnalogIC1/stu23/smic018/test
 #Removed by ddDeleteObj: DEFINE layout /home/AnalogIC1/stu23/smic018/layout
 DEFINE switch /home/AnalogIC1/stu1/smic018/switch
 DEFINE learning /home/AnalogIC1/stu23/smic018/learning
+DEFINE Analog_IC_1_Design /home/AnalogIC1/stu23/smic018/Analog_IC_1_Design

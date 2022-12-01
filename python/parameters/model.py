@@ -7,7 +7,7 @@ V_THN = 0.695
 C_OXN = 5.19268e-3
 K_N = 1.81744e-4
 
-Lambda_N = 0.1
+Lambda_N = 0.04
 
 # P MOS
 T_OXEP = 6.62e-9
@@ -17,4 +17,4 @@ V_THP = 0.672
 C_OXP = 5.21621e-3
 K_P = 4.82499e-5
 
-Lambda_P = 0.2
+Lambda_P = 0.08
