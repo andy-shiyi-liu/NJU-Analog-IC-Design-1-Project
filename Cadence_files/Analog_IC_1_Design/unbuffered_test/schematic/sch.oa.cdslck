@@ -6,11 +6,11 @@
 LockStakeVersion               1.1
 LoginName                      stu23
 HostName                       dell01
-ProcessIdentifier              49460
-ProcessCreationTime_UTC        1670376453
-ProcessCreationTime_Readable   Wed Dec  7 09:27:33 2022 CST
+ProcessIdentifier              103859
+ProcessCreationTime_UTC        1670380526
+ProcessCreationTime_Readable   Wed Dec  7 10:35:26 2022 CST
 AppIdentifier                  OA File System Design Manager
 OSType                         unix
 ReasonForPlacingEditLock       OpenAccess edit lock
-FilePathUsedToEditLock         /home/AnalogIC1/stu23/smic018/learning/mos_parameter/schematic/sch.oa.cdslck.dirlck
-TimeEditLocked                 Wed Dec  7 09:56:52 2022 CST
+FilePathUsedToEditLock         /home/AnalogIC1/stu23/smic018/Analog_IC_1_Design/unbuffered_test/schematic/sch.oa.cdslck
+TimeEditLocked                 Wed Dec  7 10:36:44 2022 CST
