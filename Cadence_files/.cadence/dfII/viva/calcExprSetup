@@ -1,4 +1,7 @@
 artistResMgrCalcExprSetup("false" "plot" "E0" "getData("/Vin-" ?result 'tran)")
-artistResMgrCalcExprSetup("false" "plot" "E1" "getData("/Vin-" ?result 'dc)")
+artistResMgrCalcExprSetup("true" "plot" "E1" "getData("/Vin-" ?result 'dc)")
 artistResMgrCalcExprSetup("true" "plot" "E2" "VT("/I2/net08")-VT("/I2/net020")")
 artistResMgrCalcExprSetup("true" "plot" "E3" "getData("/B0" ?result 'tran)")
+artistResMgrCalcExprSetup("true" "plot" "E4" "VT("/Voutn")-VT("/Voutp")")
+artistResMgrCalcExprSetup("true" "plot" "E5" "phaseMargin(VF("Vin+")/VF("Vout"))")
+artistResMgrCalcExprSetup("true" "plot" "E6" "phaseMargin(VF("Vin+")/VF("Vout"))")
