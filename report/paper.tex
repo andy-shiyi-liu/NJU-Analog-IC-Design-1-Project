@@ -277,7 +277,7 @@ NMOS参数测定电路图如图\ref{NMOS parameter circuit}所示。使用直流
 \begin{enumerate}
     \item 增大\(C_c\)，保证充足的相位裕量。
     \item 增大\(I_5\)，保证有足够的压摆率。
-    \item 增大\(S_1,\ S_2\)，抵消掉\(I_5\)增大带来的增益下降。
+    \item 增大\(S_1,\ S_2\)，抵消掉\(I_5\)增大带来的增益下降，同时保证有足够的单位增益带宽\(GB\)。
     \item 调整\(S_3,\ S_4\)，使得差分级处于正常的偏置状态。
     \item 调整\(S_6,\ S_7\)，增大增益并使输出级正常偏置。
 \end{enumerate}
@@ -355,7 +355,6 @@ NMOS参数测定电路图如图\ref{NMOS parameter circuit}所示。使用直流
 \subsection{频率响应}
 仿真电路及仿真结果展示在图\ref{AC simulation}中。可以看到，静态时增益\SI[]{95.207}{\dB} \( = 57590\)，远超设计标准。相位裕量\(\varphi_m = \) \SI[]{47.01}{\degree}，满足设计标准。单位增益带宽\(GB = \) \SI[]{5.31657}{\MHz}，远超设计标准。
 
-
 \begin{figure}[H]
     \centering
     \subfigure[仿真电路]{
@@ -363,11 +362,28 @@ NMOS参数测定电路图如图\ref{NMOS parameter circuit}所示。使用直流
     \subfigure[相位裕量计算结果]{
     \includegraphics[width=0.45\textwidth]{AC/phi_m.png}}
     \subfigure[仿真结果 - \(A_{v0}\)]{
-    \includegraphics[width=0.45\textwidth]{AC/res1.png}}
-    \subfigure[仿真结果 - \(\varphi_m\)]{
     \includegraphics[width=0.45\textwidth]{AC/res2.png}}
+    \subfigure[仿真结果 - \(\varphi_m\)]{
+    \includegraphics[width=0.45\textwidth]{AC/res1.png}}
     \caption{仿真：频率响应}
     \label{AC simulation}
 \end{figure}
+
+\subsection{共模抑制比 CMRR}
+\subsubsection{闭环测试方案}
+仿真电路及仿真结果展示在图\ref{AC simulation}中。由电路连接方式，则有关系
+\[\frac{V_{cm}}{V_{out}} = \pm \frac{1+A_v \mp \frac{A_c}{2}}{A_c} \simeq \frac{A_v}{|A_c|} = CMRR\]
+
+\begin{figure}[H]
+    \centering
+    \subfigure[仿真电路]{
+    \includegraphics[width=0.35\textwidth]{CMRR/close/circuit.png}}
+    \subfigure[仿真结果 ]{
+    \includegraphics[width=0.55\textwidth]{CMRR/close/result.png}}
+    \caption{仿真：共模抑制比 闭环测法}
+    \label{CMRR closed simulation}
+\end{figure}
+
+
 
 \end{document}
