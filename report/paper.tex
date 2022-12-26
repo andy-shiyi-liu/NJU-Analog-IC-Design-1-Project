@@ -20,7 +20,7 @@
 \usepackage{pdfpages}  % include pdf pages for original data etc.
 
 \usepackage{geometry}% 版面大小
-\geometry{a4paper,scale=0.7}
+\geometry{a4paper,scale=0.8}
 
 \usepackage{fontspec}
 
@@ -314,5 +314,60 @@ NMOS参数测定电路图如图\ref{NMOS parameter circuit}所示。使用直流
     \label{design parameters}
 \end{table}
 
+\section{运算放大器仿真及性能测试}
+
+\subsection{瞬态响应}
+仿真电路、仿真设定与仿真结果均展示在图\ref{trans simulation}中。可以看到，输出电压振荡中心大约在\SI{1.65}{\volt}处，且正弦波形无明显失真，说明运算放大器整体工作正常，能够起到放大作用。由输入电压振幅\SI[]{10}{\micro\volt}，输出电压振幅\SI[]{0.53}{\volt}，可以得到准静态状态下的\(A_v = 50344\)，远高于设计要求。
+
+\begin{figure}[H]
+    \centering
+    \subfigure[仿真电路]{
+    \includegraphics[width=0.53\textwidth]{trans/circuit.png}}
+    \subfigure[仿真设定]{
+    \includegraphics[width=0.35\textwidth]{trans/sim settings.jpg}}
+    \subfigure[仿真结果]{
+    \includegraphics[width=0.9\textwidth]{trans/sim result.png}}
+    \caption{仿真：瞬态响应}
+    \label{trans simulation}
+\end{figure}
+
+\subsection{传输特性曲线 电压输出范围}
+仿真电路及仿真结果展示在图\ref{transfer simulation}中。仿真结果中同时选取了电路中一些关键节点进行画图。可以看到，运算放大器正常工作时，所有MOS均正常偏置，工作在饱和区。
+
+同时，对于要求的输出范围：
+\begin{enumerate}
+    \item 当\(V_{out} = \) \SI{0.4}{\volt}时，\(V_{g7} = V_{bias} = \) \SI[]{1.1073}{\volt}，\(V_{s7}  = \) \SI[]{0}{\volt}，\(V_{d7} = V_{out} =\) \SI[]{0.4}{\volt}，\(V_{th}  = \) \SI[]{695}{\milli\volt}。关系\(V_{ds} > V_{gs} - V_{th}\)成立，工作在饱和区。
+    \item 当\(V_{out} = \) \SI{2.6}{\volt}时，\(V_{g6} = \) \SI[]{2.0828}{\volt}，\(V_{s6}  = \) \SI[]{3.3}{\volt}，\(V_{d6} = V_{out} =\) \SI[]{2.6}{\volt}，\(V_{th}  = \) \SI[]{672}{\milli\volt}。关系\(|V_{ds}| > |V_{gs}| - |V_{th}|\)成立，工作在饱和区。
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \subfigure[仿真电路]{
+    \includegraphics[width=0.55\textwidth]{transfer/circuit.png}}
+    \subfigure[仿真结果 - \(V_{out,min}\)]{
+    \includegraphics[width=0.45\textwidth]{transfer/res1.png}}
+    \subfigure[仿真结果 - \(V_{out,max}\)]{
+    \includegraphics[width=0.45\textwidth]{transfer/res2.png}}
+    \caption{仿真：瞬态响应}
+    \label{transfer simulation}
+\end{figure}
+
+\subsection{频率响应}
+仿真电路及仿真结果展示在图\ref{AC simulation}中。可以看到，静态时增益\SI[]{95.207}{\dB} \( = 57590\)，远超设计标准。相位裕量\(\varphi_m = \) \SI[]{47.01}{\degree}，满足设计标准。单位增益带宽\(GB = \) \SI[]{5.31657}{\MHz}，远超设计标准。
+
+
+\begin{figure}[H]
+    \centering
+    \subfigure[仿真电路]{
+    \includegraphics[width=0.45\textwidth]{AC/circuit.png}}
+    \subfigure[相位裕量计算结果]{
+    \includegraphics[width=0.45\textwidth]{AC/phi_m.png}}
+    \subfigure[仿真结果 - \(A_{v0}\)]{
+    \includegraphics[width=0.45\textwidth]{AC/res1.png}}
+    \subfigure[仿真结果 - \(\varphi_m\)]{
+    \includegraphics[width=0.45\textwidth]{AC/res2.png}}
+    \caption{仿真：频率响应}
+    \label{AC simulation}
+\end{figure}
 
 \end{document}
