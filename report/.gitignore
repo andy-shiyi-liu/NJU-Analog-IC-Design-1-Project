@@ -1,0 +1,12 @@
+# Latex Auxiliary files
+*.aux
+*.bbl
+*.blg
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+
+# Template
+template/
