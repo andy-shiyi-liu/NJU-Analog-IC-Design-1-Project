@@ -106,7 +106,7 @@
 %	DOCUMENT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\title{\textbf{运算放大器设计}} % Title
+\title{\huge\textbf{运算放大器设计}} % Title
 
 \author{电子科学与工程学院\ 刘时宜\ 201180078} % Author name
 
@@ -348,7 +348,7 @@ NMOS参数测定电路图如图\ref{NMOS parameter circuit}所示。使用直流
     \includegraphics[width=0.45\textwidth]{transfer/res1.png}}
     \subfigure[仿真结果 - \(V_{out,max}\)]{
     \includegraphics[width=0.45\textwidth]{transfer/res2.png}}
-    \caption{仿真：瞬态响应}
+    \caption{仿真：传输特性曲线\ 电压输出范围}
     \label{transfer simulation}
 \end{figure}
 
@@ -371,18 +371,93 @@ NMOS参数测定电路图如图\ref{NMOS parameter circuit}所示。使用直流
 
 \subsection{共模抑制比 CMRR}
 \subsubsection{闭环测试方案}
-仿真电路及仿真结果展示在图\ref{AC simulation}中。由电路连接方式，则有关系
+仿真电路及仿真结果展示在图\ref{CMRR closed simulation}中。由电路连接方式，则有关系
 \[\frac{V_{cm}}{V_{out}} = \pm \frac{1+A_v \mp \frac{A_c}{2}}{A_c} \simeq \frac{A_v}{|A_c|} = CMRR\]
+其中的\(V_{cm}\)即为V2与V0的共模输入。
+
+从仿真结果看，低频处\(CMRR \simeq \) \SI[]{74}{\dB}，不算十分优秀，但大致可以满足一般电路需求。另外该测量方法在存在失调电压的情况下有测量偏差。
 
 \begin{figure}[H]
     \centering
     \subfigure[仿真电路]{
     \includegraphics[width=0.35\textwidth]{CMRR/close/circuit.png}}
-    \subfigure[仿真结果 ]{
+    \subfigure[仿真结果]{
     \includegraphics[width=0.55\textwidth]{CMRR/close/result.png}}
-    \caption{仿真：共模抑制比 闭环测法}
+    \caption{仿真：共模抑制比\ 闭环测法}
     \label{CMRR closed simulation}
 \end{figure}
+
+\subsubsection{开环测试方案}
+仿真电路及仿真结果展示在图\ref{CMRR open simulation}中。从仿真结果中可以读出，低频时\(A_{cm} \simeq\) \SI[]{4.72}{\dB}。由\(CMRR = \frac{A_v}{A_{cm}}\)可知低频处\(CMRR \simeq\) \SI[]{90.5}{\dB}，指标能够满足一般电路需求，且高于闭环测试方案所得的结果。
+
+\begin{figure}[H]
+    \centering
+    \subfigure[仿真电路]{
+    \includegraphics[width=0.39\textwidth]{CMRR/open/circuit.png}}
+    \subfigure[仿真结果]{
+    \includegraphics[width=0.51\textwidth]{CMRR/open/res.png}}
+    \caption{仿真：共模抑制比\ 开环测法}
+    \label{CMRR open simulation}
+\end{figure}
+
+\subsection{输入共模范围 ICMR}
+仿真电路及仿真结果展示在图\ref{ICMR simulation}中。从仿真结果中可以看到，输入与输出曲线约在\SI[]{0.3}{\volt} \(< V_{in} <\) \SI[]{2.8}{\volt}的范围内均重合，表明ICMR为\SI[]{0.3}{\volt}至\SI[]{2.8}{\volt}，远超设计标准。同时，这个范围也可视为输出不失真的范围，表明此设计满足输出电压范围的设计标准。
+
+\begin{figure}[H]
+    \centering
+    \subfigure[仿真电路]{
+    \includegraphics[width=0.42\textwidth]{ICMR/circuit.png}}
+    \subfigure[仿真结果]{
+    \includegraphics[width=0.48\textwidth]{ICMR/result.png}}
+    \caption{仿真：输入共模范围}
+    \label{ICMR simulation}
+\end{figure}
+
+\subsection{压摆率 SR}
+仿真电路、仿真电流源以及仿真模式的设定如图\ref{SR sim settings}所示。其中脉冲电流源的高电压设为\SI[]{2}{\volt}，低电压设为\SI[]{1}{\volt}，周期设为\SI[]{10}{\micro\second}，上升和下降时间均设定为\SI[]{10}{\nano\sec}。瞬态仿真3个周期的波形。
+
+仿真结果展示在图\ref{SR sim result}中。从总仿真结果看，运算放大器工作正常，输出能较好跟随输入。选取其中一个上升沿，选择其中输出电压最大速率上升的一段，可得\(SR = \frac{\Delta U}{\Delta t} = \) \SI[]{6.966}{\volt\per{\micro\second}}。同理，选择其中一个下降沿，\(SR = \) \SI[]{6.758}{\volt\per{\micro\second}}。故\(SR\)满足设计需求。
+
+\begin{figure}[H]
+    \centering
+    \subfigure[仿真电路]{
+    \includegraphics[width=0.46\textwidth]{SR/circuit.png}}
+    \subfigure[脉冲源设定]{
+    \includegraphics[width=0.2\textwidth]{SR/source.png}}
+    \subfigure[仿真设置]{
+    \includegraphics[width=0.24\textwidth]{SR/sim settings.png}}
+    \caption{仿真设定：压摆率}
+    \label{SR sim settings}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \subfigure[仿真结果]{
+    \includegraphics[width=0.9\textwidth]{SR/res.png}}
+    \subfigure[上升沿]{
+    \includegraphics[width=0.45\textwidth]{SR/raising edge.png}}
+    \subfigure[下降沿]{
+    \includegraphics[width=0.45\textwidth]{SR/falling edge.png}}
+    \caption{仿真设定：压摆率}
+    \label{SR sim result}
+\end{figure}
+
+
+\section{电源纹波电压抑制比 PSRR}
+由于运算放大器采用单电源供电形式，故只需要测量\(PSRR+ = \frac{V_{dd,ac}}{V_{out,ac}}\)即可。仿真电路以及仿真结果展示在图\ref{PSRR simulation}中。低频时，\(PSRR \simeq \) \SI[]{110}{\dB}。
+
+\begin{figure}[H]
+    \centering
+    \subfigure[仿真电路]{
+    \includegraphics[width=0.42\textwidth]{PSRR/circuit.png}}
+    \subfigure[仿真结果]{
+    \includegraphics[width=0.48\textwidth]{PSRR/res.png}}
+    \caption{仿真：电源纹波电压抑制比}
+    \label{PSRR simulation}
+\end{figure}
+
+\subsection{噪声}
+\subsubsection{闭环噪声}
 
 
 
