@@ -155,7 +155,7 @@
 NMOS参数测定电路图如图\ref{NMOS parameter circuit}所示。使用直流分析后打印模型参数（Results - Print - Model Parameters）以及直流工作点（Results - Print - DC Operating Points）即可得NMOS管的$T_{oxe}$、$\mu_{n}$、$V_{th0}$、$g_{ds}$，利用公式
 \[C_{oxe} = \frac{\epsilon_{ox}}{T_{oxe}}\]
 \[K^{'}_{n} = \mu_n \cdot C_{oxe}\]
-\[g_ds = \lambda \cdot I_d\]
+\[g_{ds} = \lambda \cdot I_d\]
 可得$C_{oxe}$、$K^{'}_{n}$、$g_{ds}$三参数。以上测量以及计算所得的参数列在表\ref{NMOS key parameters}中。
 
 \begin{figure}[H]
@@ -438,12 +438,12 @@ NMOS参数测定电路图如图\ref{NMOS parameter circuit}所示。使用直流
     \includegraphics[width=0.45\textwidth]{SR/raising edge.png}}
     \subfigure[下降沿]{
     \includegraphics[width=0.45\textwidth]{SR/falling edge.png}}
-    \caption{仿真设定：压摆率}
+    \caption{仿真结果：压摆率}
     \label{SR sim result}
 \end{figure}
 
 
-\section{电源纹波电压抑制比 PSRR}
+\subsection{电源纹波电压抑制比 PSRR}
 由于运算放大器采用单电源供电形式，故只需要测量\(PSRR+ = \frac{V_{dd,ac}}{V_{out,ac}}\)即可。仿真电路以及仿真结果展示在图\ref{PSRR simulation}中。低频时，\(PSRR \simeq \) \SI[]{110}{\dB}。
 
 \begin{figure}[H]
@@ -458,7 +458,50 @@ NMOS参数测定电路图如图\ref{NMOS parameter circuit}所示。使用直流
 
 \subsection{噪声}
 \subsubsection{闭环噪声}
+使用cadence提供的噪声分析，仿真电路、仿真及绘图设置、仿真结果均展示在图\ref{noise simulation closed}中。可以看到，在\SI[]{1}{\hertz}时，噪声为\SI[]{11.483}{\micro\volt\per{\sqrt{\hertz}}}。频率增加时。噪声减小。
 
+\begin{figure}[H]
+    \centering
+    \subfigure[仿真电路]{
+    \includegraphics[width=0.5\textwidth]{noise/close/circuit.png}}
+    \subfigure[仿真设定]{
+    \includegraphics[width=0.18\textwidth]{noise/close/sim.png}}
+    \subfigure[绘图设定]{
+    \includegraphics[width=0.22\textwidth]{noise/close/plot.png}}
+    \subfigure[仿真结果]{
+    \includegraphics[width=0.9\textwidth]{noise/close/res.png}}
+    \caption{仿真：闭环噪声}
+    \label{noise simulation closed}
+\end{figure}
 
+\subsubsection{开环噪声}
+与闭环噪声同理，仿真电路、仿真及绘图设置、仿真结果均展示在图\ref{noise simulation open}中。可以看到，在\SI[]{1}{\hertz}时，噪声为\SI[]{585.827}{\milli\volt\per{\sqrt{\hertz}}}。噪声远大于闭环噪声。
+
+\begin{figure}[H]
+    \centering
+    \subfigure[仿真电路]{
+    \includegraphics[width=0.5\textwidth]{noise/open/circuit.png}}
+    \subfigure[仿真设定]{
+    \includegraphics[width=0.18\textwidth]{noise/open/sim.png}}
+    \subfigure[绘图设定]{
+    \includegraphics[width=0.21\textwidth]{noise/open/plot.png}}
+    \subfigure[仿真结果]{
+    \includegraphics[width=0.9\textwidth]{noise/open/res.png}}
+    \caption{仿真：开环噪声}
+    \label{noise simulation open}
+\end{figure}
+
+\subsection{输入失调电压}
+仿真电路及仿真结果展示在图\ref{Voff simulation}中。可以看到，当\(V_{out} = \frac{1}{2}\left(V_{dd} + V_{ss} = \right)\) \SI[]{1.65}{\volt}时，对应的输入偏置\(V_{off} = \)\SI[]{21.723}{\nano\volt}，指标较为优秀。
+
+\begin{figure}[H]
+    \centering
+    \subfigure[仿真电路]{
+    \includegraphics[width=0.35\textwidth]{Voff/circuit.png}}
+    \subfigure[仿真结果]{
+    \includegraphics[width=0.55\textwidth]{Voff/res.png}}
+    \caption{仿真：输入偏置}
+    \label{Voff simulation}
+\end{figure}
 
 \end{document}
