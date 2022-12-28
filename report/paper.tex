@@ -85,8 +85,6 @@
 \usepackage{trace}
 
 
-
-
 %设置图片、表格编号
 \renewcommand{\thetable}{\thesubsection{}-\arabic{table}}
 \renewcommand{\thefigure}{\thesubsection{}-\arabic{figure}}
@@ -133,6 +131,8 @@
 % \end{abstract}
 
 \tableofcontents
+
+\clearpage
 
 \section{基本设计要求}
 本次设计的参数要求如表\ref{design req}所示：
@@ -317,7 +317,7 @@ NMOS参数测定电路图如图\ref{NMOS parameter circuit}所示。使用直流
 \section{运算放大器仿真及性能测试}
 
 \subsection{瞬态响应}
-仿真电路、仿真设定与仿真结果均展示在图\ref{trans simulation}中。可以看到，输出电压振荡中心大约在\SI{1.65}{\volt}处，且正弦波形无明显失真，说明运算放大器整体工作正常，能够起到放大作用。由输入电压振幅\SI[]{10}{\micro\volt}，输出电压振幅\SI[]{0.53}{\volt}，可以得到准静态状态下的\(A_v = 50344\)，远高于设计要求。
+仿真电路、仿真设定与仿真结果均展示在图\ref{trans simulation}中。可以看到，输出电压振荡中心大约在\SI{1.65}{\volt}处，且正弦波形无明显失真，说明运算放大器整体工作正常，能够起到放大作用。由输入电压振幅\SI[]{10}{\micro\volt}，输出电压振幅\SI[]{0.53}{\volt}，可以得到\SI[]{10}{\hertz}时的\(A_v = 50344\)，远高于设计要求。
 
 \begin{figure}[H]
     \centering
@@ -331,7 +331,7 @@ NMOS参数测定电路图如图\ref{NMOS parameter circuit}所示。使用直流
     \label{trans simulation}
 \end{figure}
 
-\subsection{传输特性曲线 电压输出范围}
+\subsection{传输特性曲线\ 电压输出范围}
 仿真电路及仿真结果展示在图\ref{transfer simulation}中。仿真结果中同时选取了电路中一些关键节点进行画图。可以看到，运算放大器正常工作时，所有MOS均正常偏置，工作在饱和区。
 
 同时，对于要求的输出范围：
@@ -369,7 +369,7 @@ NMOS参数测定电路图如图\ref{NMOS parameter circuit}所示。使用直流
     \label{AC simulation}
 \end{figure}
 
-\subsection{共模抑制比 CMRR}
+\subsection{共模抑制比}
 \subsubsection{闭环测试方案}
 仿真电路及仿真结果展示在图\ref{CMRR closed simulation}中。由电路连接方式，则有关系
 \[\frac{V_{cm}}{V_{out}} = \pm \frac{1+A_v \mp \frac{A_c}{2}}{A_c} \simeq \frac{A_v}{|A_c|} = CMRR\]
@@ -400,7 +400,7 @@ NMOS参数测定电路图如图\ref{NMOS parameter circuit}所示。使用直流
     \label{CMRR open simulation}
 \end{figure}
 
-\subsection{输入共模范围 ICMR}
+\subsection{输入共模范围}
 仿真电路及仿真结果展示在图\ref{ICMR simulation}中。从仿真结果中可以看到，输入与输出曲线约在\SI[]{0.3}{\volt} \(< V_{in} <\) \SI[]{2.8}{\volt}的范围内均重合，表明ICMR为\SI[]{0.3}{\volt}至\SI[]{2.8}{\volt}，远超设计标准。同时，这个范围也可视为输出不失真的范围，表明此设计满足输出电压范围的设计标准。
 
 \begin{figure}[H]
@@ -413,8 +413,8 @@ NMOS参数测定电路图如图\ref{NMOS parameter circuit}所示。使用直流
     \label{ICMR simulation}
 \end{figure}
 
-\subsection{压摆率 SR}
-仿真电路、仿真电流源以及仿真模式的设定如图\ref{SR sim settings}所示。其中脉冲电流源的高电压设为\SI[]{2}{\volt}，低电压设为\SI[]{1}{\volt}，周期设为\SI[]{10}{\micro\second}，上升和下降时间均设定为\SI[]{10}{\nano\sec}。瞬态仿真3个周期的波形。
+\subsection{压摆率}
+仿真电路、仿真电流源以及仿真模式的设定如图\ref{SR sim settings}所示。其中脉冲电流源的高电压设为\SI[]{2}{\volt}，低电压设为\SI[]{1}{\volt}，周期设为\SI[]{10}{\micro\second}，上升和下降时间均设定为\SI[]{10}{\nano\second}。瞬态仿真3个周期的波形。
 
 仿真结果展示在图\ref{SR sim result}中。从总仿真结果看，运算放大器工作正常，输出能较好跟随输入。选取其中一个上升沿，选择其中输出电压最大速率上升的一段，可得\(SR = \frac{\Delta U}{\Delta t} = \) \SI[]{6.966}{\volt\per{\micro\second}}。同理，选择其中一个下降沿，\(SR = \) \SI[]{6.758}{\volt\per{\micro\second}}。故\(SR\)满足设计需求。
 
@@ -443,7 +443,7 @@ NMOS参数测定电路图如图\ref{NMOS parameter circuit}所示。使用直流
 \end{figure}
 
 
-\subsection{电源纹波电压抑制比 PSRR}
+\subsection{电源纹波电压抑制比}
 由于运算放大器采用单电源供电形式，故只需要测量\(PSRR+ = \frac{V_{dd,ac}}{V_{out,ac}}\)即可。仿真电路以及仿真结果展示在图\ref{PSRR simulation}中。低频时，\(PSRR \simeq \) \SI[]{110}{\dB}。
 
 \begin{figure}[H]
@@ -492,7 +492,7 @@ NMOS参数测定电路图如图\ref{NMOS parameter circuit}所示。使用直流
 \end{figure}
 
 \subsection{输入失调电压}
-仿真电路及仿真结果展示在图\ref{Voff simulation}中。可以看到，当\(V_{out} = \frac{1}{2}\left(V_{dd} + V_{ss} = \right)\) \SI[]{1.65}{\volt}时，对应的输入偏置\(V_{off} = \)\SI[]{21.723}{\nano\volt}，指标较为优秀。
+仿真电路及仿真结果展示在图\ref{Voff simulation}中。可以看到，当\(V_{out} = \frac{1}{2}\left(V_{dd} + V_{ss} = \right)\) \SI[]{1.65}{\volt}时，对应的输入失调电压\(V_{offset} = \)\SI[]{21.723}{\nano\volt}，指标较为优秀。
 
 \begin{figure}[H]
     \centering
@@ -500,7 +500,7 @@ NMOS参数测定电路图如图\ref{NMOS parameter circuit}所示。使用直流
     \includegraphics[width=0.35\textwidth]{Voff/circuit.png}}
     \subfigure[仿真结果]{
     \includegraphics[width=0.55\textwidth]{Voff/res.png}}
-    \caption{仿真：输入偏置}
+    \caption{仿真：输入失调电压}
     \label{Voff simulation}
 \end{figure}
 
@@ -517,5 +517,32 @@ NMOS参数测定电路图如图\ref{NMOS parameter circuit}所示。使用直流
     \label{Pdiss simulation}
 \end{figure}
 
+\section{总结}
+经过一系列实验测试，设计的运算放大器各项指标满足设计需求，总结在表\ref{design performance}中。本次实验同时也让我对运算放大器等电路设计的流程方法有了更切实的掌握。在本次的设计需求中，对增益、功率、输入输出电压范围的要求均较低，因此在设计时可以用这些方面的表现换取其他指标较好的性能，要求较为宽泛。
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabular}{l l l l}
+    \toprule
+        \textbf{指标} & \ \ \ & \textbf{要求} & \textbf{实际性能} \\ \midrule
+        \(V_{dd}\) & & \SI[]{3.3}{\volt} & \SI[]{3.3}{\volt}\\ 
+        \(GB\) & & \SI[]{3}{\MHz} & \SI[]{5.31657}{\MHz}\\ 
+        \(SR\) & & \SI[]{3}{\volt\per{\micro\second}} & \SI[]{6.758}{\volt\per{\micro\second}}\\ 
+        \(\varphi_m\) & & \SI[]{45}{\degree} & \SI[]{47.01}{\degree}\\ 
+        \(Vout\) & & \SI[]{0.4}{\volt} 到 \SI[]{2.6}{\volt} & \SI[]{0.3}{\volt} 到 \SI[]{2.8}{\volt}\\ 
+        \(ICMR\) & & \SI[]{1.25}{\volt} 到 \SI[]{2.5}{\volt} & \SI[]{0.3}{\volt} 到 \SI[]{2.8}{\volt}\\ 
+        \(P_{diss}\) & & \SI[]{5}{\milli\watt} & \SI[]{0.8679}{\milli\watt}\\ 
+        \(A_v\) & & 5000 & 57590 \\ 
+        \(C_l\) & & \SI[]{10}{\pico\farad} & \SI[]{10}{\pico\farad}\\ 
+        \(CMRR\) & & \SI[]{}{} & \SI[]{90.5}{\dB}\\ 
+        \(PSRR\) & & \SI[]{}{} & \SI[]{110}{\dB}\\ 
+        闭环噪声 & & \SI[]{}{} & \SI[]{11.483}{\micro\volt\per{\sqrt{\hertz}}}\\ 
+        开环噪声 & & \SI[]{}{} & \SI[]{585.827}{\milli\volt\per{\sqrt{\hertz}}}\\ 
+        输入失调电压 & & \SI[]{}{} & \SI[]{21.723}{\nano\volt}\\ 
+    \bottomrule
+    \end{tabular}
+    \caption{性能指标汇总}
+    \label{design performance}
+\end{table}
 
 \end{document}
