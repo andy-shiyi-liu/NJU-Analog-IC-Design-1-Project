@@ -504,4 +504,18 @@ NMOS参数测定电路图如图\ref{NMOS parameter circuit}所示。使用直流
     \label{Voff simulation}
 \end{figure}
 
+\subsection{功率}
+仿真电路及仿真结果展示在图\ref{Pdiss simulation}中。由于在运算放大器本身的设计中没有将\(V_{dd}\)直接接上电源（见图\ref{design circuit}），因此只需要测量外部接入的电源提供的电流，乘以自身的电压即可得到功率消耗情况。从仿真结果中可以看到，静态时\(V_{dd}\)提供的电流为\SI[]{263.988}{\micro\ampere}，故得到运算放大器功耗约为\SI[]{0.8679}{\milli\watt}，远低于设计要求。
+
+\begin{figure}[H]
+    \centering
+    \subfigure[仿真电路]{
+    \includegraphics[width=0.4\textwidth]{Pdiss/circuit.png}}
+    \subfigure[仿真结果]{
+    \includegraphics[width=0.5\textwidth]{Pdiss/res.png}}
+    \caption{仿真：功率}
+    \label{Pdiss simulation}
+\end{figure}
+
+
 \end{document}
